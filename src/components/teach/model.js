@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, } from 'react';
 import bind from 'react-autobind';
 
 export default class model extends Component {
   constructor(props){
-    super(props)
+    super(props);
     this.state={
 
-    }
-    bind(this)
+    };
+    bind(this);
   }
   render() {
-    {console.log(this)}
+    {console.log(this);}
     return (
-      {...this.props.children}
-    )
+      {...this.props.children,}
+    );
   }
 }

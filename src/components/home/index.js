@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, } from 'react';
 import View from './view';
 import Model from './model';
 
@@ -8,6 +8,6 @@ export default class index extends Component {
       <div>
         <Model  {...this.props}><View   {...this.props}/></Model>
       </div>
-    )
+    );
   }
 }

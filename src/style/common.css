@@ -1,0 +1,22 @@
+html,body,div,ul,li{
+  margin: 0px;
+  padding: 0px;
+}
+
+li{
+  list-style: none;
+}
+
+.clearfix::after{
+  height:0;
+  content: "";
+  overflow: hidden;
+  display: block;
+}
+.fl{
+  float:left;
+
+}
+.fr{
+  float:right;
+}
