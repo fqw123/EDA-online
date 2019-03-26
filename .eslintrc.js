@@ -90,8 +90,8 @@ module.exports={
     "react/jsx-equals-spacing": 2, //在JSX属性中强制或禁止等号周围的空格
     "no-unreachable": 1, //不能有无法执行的代码
     "comma-dangle": ["error", "always"], //对象字面量项尾必须有逗号
-    "no-mixed-spaces-and-tabs": 0, //禁止混用tab和空格
-    "prefer-arrow-callback": 0, //比较喜欢箭头回调
+   
+   
     "arrow-parens": 0, //箭头函数用小括号括起来
     "arrow-spacing": 0, //=>的前/后括号
     "prefer-const": ["error", {

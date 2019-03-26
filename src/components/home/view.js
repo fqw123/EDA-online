@@ -4,7 +4,7 @@ import styles from './style.scss';
 export default class view extends Component {
   render() {
     return (
-      <div  styleName={styles.homePage}>
+      <div  stylename={styles.homePage}>
         {console.log('style home',styles)}
         <span>12344</span>
       </div>

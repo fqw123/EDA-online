@@ -36,7 +36,7 @@ const useYarn = fs.existsSync(paths.yarnLockFile);
 const isInteractive = process.stdout.isTTY;
 
 // Warn and crash if required files are missing
-if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
+if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs,])) {
   process.exit(1);
 }
 
@@ -53,7 +53,7 @@ if (process.env.HOST) {
     )
   );
   console.log(
-    `If this was unintentional, check that you haven't mistakenly set it in your shell.`
+    'If this was unintentional, check that you haven\'t mistakenly set it in your shell.'
   );
   console.log(
     `Learn more here: ${chalk.yellow('https://bit.ly/CRA-advanced-config')}`
@@ -63,7 +63,7 @@ if (process.env.HOST) {
 
 // We require that you explictly set browsers and do not fall back to
 // browserslist defaults.
-const { checkBrowsers } = require('react-dev-utils/browsersHelper');
+const { checkBrowsers, } = require('react-dev-utils/browsersHelper');
 checkBrowsers(paths.appPath, isInteractive)
   .then(() => {
     // We attempt to use the default port but if it is busy, we offer the user to
@@ -117,7 +117,7 @@ checkBrowsers(paths.appPath, isInteractive)
       openBrowser(urls.localUrlForBrowser);
     });
 
-    ['SIGINT', 'SIGTERM'].forEach(function(sig) {
+    ['SIGINT', 'SIGTERM',].forEach(function(sig) {
       process.on(sig, function() {
         devServer.close();
         process.exit();

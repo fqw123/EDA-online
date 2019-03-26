@@ -40,7 +40,7 @@ const WARN_AFTER_CHUNK_GZIP_SIZE = 1024 * 1024;
 const isInteractive = process.stdout.isTTY;
 
 // Warn and crash if required files are missing
-if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
+if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs,])) {
   process.exit(1);
 }
 
@@ -53,7 +53,7 @@ const config = configFactory('production');
 
 // We require that you explicitly set browsers and do not fall back to
 // browserslist defaults.
-const { checkBrowsers } = require('react-dev-utils/browsersHelper');
+const { checkBrowsers, } = require('react-dev-utils/browsersHelper');
 checkBrowsers(paths.appPath, isInteractive)
   .then(() => {
     // First, read the current file sizes in build directory.
@@ -70,7 +70,7 @@ checkBrowsers(paths.appPath, isInteractive)
     return build(previousFileSizes);
   })
   .then(
-    ({ stats, previousFileSizes, warnings }) => {
+    ({ stats, previousFileSizes, warnings, }) => {
       if (warnings.length) {
         console.log(chalk.yellow('Compiled with warnings.\n'));
         console.log(warnings.join('\n\n'));
@@ -127,7 +127,7 @@ checkBrowsers(paths.appPath, isInteractive)
 function build(previousFileSizes) {
   console.log('Creating an optimized production build...');
 
-  let compiler = webpack(config);
+  const compiler = webpack(config);
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
       let messages;
@@ -136,12 +136,12 @@ function build(previousFileSizes) {
           return reject(err);
         }
         messages = formatWebpackMessages({
-          errors: [err.message],
+          errors: [err.message,],
           warnings: [],
         });
       } else {
         messages = formatWebpackMessages(
-          stats.toJson({ all: false, warnings: true, errors: true })
+          stats.toJson({ all: false, warnings: true, errors: true, })
         );
       }
       if (messages.errors.length) {

@@ -1,0 +1,65 @@
+
+  .box{
+  
+    padding: 12px 100px;
+    background-color: #39424E;
+    text-align: center;
+    color:#fff;
+    .imgB{
+      margin-right: 50px;
+      img{
+        vertical-align: bottom;
+      }
+      .stext{
+        margin-left: 8px;
+        font-size: 30px;
+        color:#24C85D;
+        vertical-align: top;
+
+      }
+    }
+    .intUl{
+      
+        width:400px;
+        float: left;
+        margin-top: 5px;
+       .ili{
+        position: relative;
+         a{
+            color:white;
+            font-size: 18px;
+            font-weight: 400;
+         }
+            float: left;
+            margin-right: 30px;
+           
+          .ib{
+            display: inline-block;
+            height:2px;
+            width:44px;
+            background-color: #24C85D;
+            position: absolute;
+            top:44px;
+            left:-3px;
+          }
+          &:nth-of-type(4){
+            .ib{
+              width:100px;
+
+            }
+          }
+       }
+    }
+    .log{
+      span{
+        a{
+           color:white;
+        }
+      }
+     
+      margin-top: 8px;
+      width:110px;
+      float: right;
+      text-align: left;
+    }
+}  

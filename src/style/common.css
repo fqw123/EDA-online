@@ -6,12 +6,16 @@ html,body,div,ul,li{
 li{
   list-style: none;
 }
-
+a{
+  color:black;
+  text-decoration: transparent;
+}
 .clearfix::after{
   height:0;
   content: "";
   overflow: hidden;
   display: block;
+  clear: both;
 }
 .fl{
   float:left;
