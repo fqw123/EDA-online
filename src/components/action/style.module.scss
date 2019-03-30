@@ -27,24 +27,37 @@
     }
   }
 }
-.botIm{
-  width:100%;
-  .imgbox{
-    float: left;
-    width:30%;
-    margin-right: 10px;
-    text-align: center;
-    .comp{
-      width:200px;
-      height:200px;
-    }
-    p{
-      height:30px;
-      width: 70px;
-      border-bottom: 1px solid #ccc;
-      margin-left: 130px;
-    }
-   
 
-   }
+.sealine{
+  padding-top: 20px;
+  .searchL{
+  width:400px;
+  float: left;
+  }
+}
+
+
+:global{
+   /* 输入框 */
+  .ant-btn-primary{
+    background-color:#009688!important;
+    border-color: #009688!important;
+  }
+
+  .fuwei{
+    float: left;
+    margin-left: 30px;
+    .ant-btn{
+    height:40px;
+    font-size: 16px;
+  }
+  }
+  .fourBtn{
+    width:100%;
+    padding: 30px 0;
+    button{
+      margin-right: 20px;
+    }
+  }
+ 
 }

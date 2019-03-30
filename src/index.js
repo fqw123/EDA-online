@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CSSModules from 'react-css-modules';
 import './style/common.css';
+import 'antd/dist/antd.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 // import {LocalProvider} from 'antd';
