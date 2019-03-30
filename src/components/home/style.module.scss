@@ -1,0 +1,41 @@
+.homePage{
+    .titleBox{
+      height:50px;
+      line-height: 50px;
+      background-color: #F5F5F5;
+      padding: 0  100px;
+      border-bottom: 1px solid #ccc;
+      .titleTxt{
+        font-size: 16px;
+        color:#5A5D67;
+        
+      }
+    }
+    .line1{
+      margin-top: 50px;
+      font-size: 45px;
+      text-align: center;
+      letter-spacing: 10px;
+    }
+    .line2{
+      margin-top: 20px;
+      font-size: 25px;
+      text-align: center;
+      letter-spacing: 10px;
+    }
+    .imgb{
+      width:500px;
+      height:300px;
+      text-align: center;
+      margin-left: 422px;
+      margin-top: 20px;
+    }
+    .labText{
+      margin: 30px 45% 30px;
+      font-size: 28px;
+      text-align: center;
+      display: inline-block;
+      height: 42px;
+      border-bottom: 1px solid black;
+    }
+}
