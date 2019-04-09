@@ -10,6 +10,7 @@ import Teach from './components/teach';
 import  Login from './components/login';
 import  LogOut from  './components/loginOut';
 import Labor from './components/Laboratory';
+import User from './components/user';
 
 class App extends Component {
     constructor(props){
@@ -19,47 +20,55 @@ class App extends Component {
         };
     }
     render() {
+
         return (
             <div className="App">
                 <Router  history={createHistory()}>
-                    <Header className="App-header">
-                    </Header>
-                    <Route    component={Home}
-                        exact
-                        path="/"
-                    />
-                    <Route    component={Study}
-                        exact
-                        path="/study"
-                    />
-                    <Route    component={Home}
-                        exact
-                        path="/home"
-                    />
-                    <Route    component={Teach}
-                        exact
-                        path="/teach"
-                    />
-                    <Route    component={Labor}
-                        exact
-                        path="/Labor"
-                    />
-                    <Route    component={Login}
-                        exact
-                        path="/Login"
-                    />
-                    <Route    component={LogOut}
-                        exact
-                        path="/LogOut"
-                    />
-                    <Route    component={Active}
-                        exact
-                        path="/active"
-                    />
-                    <Route    component={Action}
-                        exact
-                        path="/action"
-                    />
+                    {console.log('match', this)}
+                    <Route>
+                        <Header className="App-header" {...this.props} >
+                        </Header>
+                        <Route    component={Home}
+                            exact
+                            path="/"
+                        />
+                        <Route    component={Study}
+                            exact
+                            path="/study"
+                        />
+                        <Route    component={Home}
+                            exact
+                            path="/home"
+                        />
+                        <Route    component={Teach}
+                            exact
+                            path="/teach"
+                        />
+                        <Route    component={Labor}
+                            exact
+                            path="/Labor"
+                        />
+                        <Route    component={Login}
+                            exact
+                            path="/Login"
+                        />
+                        <Route    component={LogOut}
+                            exact
+                            path="/LogOut"
+                        />
+                        <Route    component={Active}
+                            exact
+                            path="/active"
+                        />
+                        <Route    component={Action}
+                            exact
+                            path="/action"
+                        />
+                        <Route    component={User}
+                            exact
+                            path="/user"
+                        />
+                    </Route>
                     
                 </Router>
 

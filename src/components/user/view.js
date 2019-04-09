@@ -4,7 +4,7 @@ export default class view extends Component {
     render() {
         return (
             <div >
-            注册
+         个人中心
             </div>
         );
     }

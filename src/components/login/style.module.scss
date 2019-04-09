@@ -1,0 +1,68 @@
+.hbox{
+  height:60px;
+  line-height: 60px;
+  width:150px;
+  background-color: #fff;
+  font-size: 20px;
+  margin-left: 200px;
+ 
+}
+
+.login{
+  width:100%;
+  height:640px;
+  background-color: #3c8DBC;
+  padding: 10% 40%;
+  .logCen{
+    width:350px;
+    height:250px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 3px;
+    .ltit{
+      height:50px;
+      text-align: center;
+      line-height: 50px;
+      border-bottom: 1px solid #fff;
+      font-size: 20px;
+      color:#fff;
+      font-size: 20px;
+
+    }
+    .intcen{
+      padding: 0px  70px;
+      .pline{
+        border-bottom: 1px solid #ccc;
+        margin: 20px auto;
+        input{
+          background-color: transparent;
+          border:none;
+          outline:medium;
+          width:150px;
+          height:25px;
+          text-indent: 1.5rem;
+          color:#fff;
+        }
+        .pint{
+          // color:#fff;
+        }
+         
+       }
+       .btnBox{
+         margin-top: 20px;
+        width:100%;
+        height:30px;
+        background-color: #1E9fff;
+        border-color: #1E9fff;
+        border-radius: 3px ;
+        text-align: center;
+        color:#fff;
+      }
+      .forget{
+        color:white;
+        float:right;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

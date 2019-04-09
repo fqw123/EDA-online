@@ -9,6 +9,8 @@
   width:100%;
   font-size: 18px;
   border-bottom: 1px solid #ccc;
+  box-shadow: 2px 2px 2px  #ccc;
+  opacity: 0.4;
   padding: 0 0 10px;
   .spand{
     display: block;
@@ -27,14 +29,69 @@
     }
   }
 }
-
-.sealine{
-  padding-top: 20px;
-  .searchL{
-  width:400px;
+.left{
   float: left;
+  width:580px;
+  height:900px;
+ 
+  .sealine{
+    padding: 20px  0 0 50PX;
+    .searchL{
+    width:400px;
+    float: left;
+    }
   }
+   .videoB{
+      width:500px;
+      height:300px;
+      border:1px solid #009688;
+      margin:  0 0 0 50px;
+    }
 }
+.right{
+  float: left;
+  width:410px;
+
+  .card{
+    margin: 75px 100px;
+    width:300px;
+    height:290px;
+    border:1px solid #ccc;
+    border-radius: 4px ;
+    box-shadow: 2px 2px 2px #ccc;
+    .value{
+      font-size: 16px;
+      height:30px;
+      font-weight: 400;
+      text-indent: 20px;
+      color: rgba(0, 0, 0, 0.65);
+    }
+    .Name{
+      margin-top: 20px;
+      font-size: 16px;
+      height:30px;
+      font-weight: 400;
+      opacity: 1;
+      text-indent: 20px;
+      color: rgba(0, 0, 0, 0.65);
+      border-bottom: 1px solid #ccc;
+     
+    }
+    .bodp{
+      margin: 20px 0 0 20px;
+      p{
+        
+      }
+      
+    }
+    .atext{
+      margin: 40px  0 0px 20px;
+
+    }
+  }
+
+}
+
 
 
 :global{
@@ -54,10 +111,11 @@
   }
   .fourBtn{
     width:100%;
-    padding: 30px 0;
+    padding: 30px 50PX;
     button{
       margin-right: 20px;
     }
   }
+ 
  
 }

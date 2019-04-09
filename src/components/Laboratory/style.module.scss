@@ -1,0 +1,26 @@
+.titleBox{
+  height:50px;
+  line-height: 50px;
+  background-color: #F5F5F5;
+  padding: 0  100px;
+  border-bottom: 1px solid #ccc;
+  .titleTxt{
+    font-size: 16px;
+    color:#5A5D67;
+    
+  }
+}
+.centerTxt{
+  text-indent: 2em;
+  font-size: 18px;
+  padding: 30px 240px;
+  vertical-align: top;
+  .titImg{
+    display: block;
+    width:500px;
+    height:300px;
+    margin: 10px 0px;
+    text-align: center;
+
+  }
+}

@@ -14,10 +14,9 @@ export default class model extends Component {
         // console.log("this);
     }
     newData(){
-        message.success('This is a message of success');
 
         message.success('刷新成功');
-        alert('刷新成功');
+       
     }
 
     render() {

@@ -2,7 +2,7 @@
   .box{
     box-shadow: 2px 3px 4px #ccc; 
     padding: 12px 100px;
-    background-color: #39424E;
+    background-color: #161616;
     text-align: center;
     color:#fff;
     .imgB{
@@ -13,7 +13,7 @@
       .stext{
         margin-left: 8px;
         font-size: 30px;
-        color:#24C85D;
+        color:#3FB34F;
         vertical-align: top;
 
       }
@@ -52,6 +52,12 @@
     }
     .log{
       span{
+        cursor: pointer;
+         .imgg{
+            width:40px;
+            height:40px;
+            border-radius: 50%;
+         }
         a{
            color:white;
         }

@@ -9,6 +9,7 @@ li{
 a{
   color:black;
   text-decoration: transparent;
+  touch-action: none;
 }
 .clearfix::after{
   height:0;

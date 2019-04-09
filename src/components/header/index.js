@@ -1,28 +1,70 @@
 import React, { Component } from 'react';
-import {Link } from 'react-router-dom';
+import {Link, withRouter } from 'react-router-dom';
+import cookie  from 'react-cookies';
 import style from './style.module.scss';
 import bind from 'react-autobind';
 
-export default class index extends Component {
+class Index extends Component {
     constructor(props){
         super(props);
         this.state = {
-            key: 1
+            key: '',
+            boolen: true
+           
         };
         bind(this);
     }
     pageclick(k, l){
-        console.log('k,l', k, l);
+        // console.log('k,l', k, l);
         this.setState({
             key: k
         });
 
     }
+    UNSAFE_componentWillReceiveProps(){
+        setTimeout(
+            ()=>{
+
+                let str = this.props.location.pathname;
+                if(str === '/login'){
+                    this.setState({
+                        boolen: false
+                    }, ()=>{
+                        console.log('boolen', this.state.boolen);
+                    });
+                }else{
+                    this.setState({
+                        boolen: true
+                    });
+                }
+            }, 100
+        );
+    
+    }
+    changeLog(){
+        cookie.remove('username');
+    }
+    componentDidMount(){
+        let str = this.props.location.pathname;
+        if(str === '/login'){
+            this.setState({
+                boolen: false
+            }, ()=>{
+                console.log('boolen', this.state.boolen);
+            });
+        }else{
+            this.setState({
+                boolen: true
+            });
+        }
+    }
     render() {
+        const  {location} = this.props;
+        const {boolen} = this.state;
         return (
-            <div  className={style.box + '  head  clearfix'}>
-                {console.log('style', style)}
-                <div className={style.imgB + ' fl'}> <img src={require('../../images/icon_nsmiwta8kfh/dianzi.png')}/> <span className={style.stext}>EAD</span></div>
+            <div  className={style.box + '  head  clearfix'}   style={boolen ? {display: 'block'} : {display: 'none'}}>
+                {/* {console.log('this', this, location.pathname)} */}
+                <div className={style.imgB + ' fl'}> <img src={require('../../images/icon_nsmiwta8kfh/dianzi.png')}/> <span className={style.stext}>EDA</span></div>
                 <ul className={style.intUl + '  clearfix'}>
                     <li className={style.ili}
                         onClick={this.pageclick.bind(this, 1)}
@@ -46,11 +88,12 @@ export default class index extends Component {
                         ></i></li>
                 </ul>
                 <div className={style.log}>
-                    <span><Link to="/login" >登录&emsp;</Link></span>|
-                    <span><Link to="/logout" >&emsp;退出</Link></span>
+                    <span  onClick={this.changeLog}><Link to="/user" ><img    className={style.imgg} src={require('../../images/user.jpg')}/></Link><Link to="/login" > 退出&emsp;</Link></span>
+                   
                 </div>
             </div>
         );
     }
 
 }
+export default withRouter(Index);
