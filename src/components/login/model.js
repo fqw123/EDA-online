@@ -40,7 +40,7 @@ export default class model extends Component {
        
     }
     render() {
-       
+        console.log('this.props.children', this.props);
         return (
             this.props.children({
                 ...this.props,

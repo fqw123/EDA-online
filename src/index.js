@@ -13,3 +13,25 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+
+
+// btn(){
+//   console.log('1111');
+//   fetch('https://api.github.com/users')
+//       .then((res) => res.json())
+//       .then(data => {
+//           console.log(data);
+//           let output = '';
+//           data.forEach((user) => {
+//               output += `<li>${user.login}</li>`;
+//           });
+//           document.getElementById('output').innerHTML = output;
+//       })
+//       .catch(err => console.log(err));
+// }
+
+
+
+
+

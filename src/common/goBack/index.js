@@ -8,7 +8,7 @@ export default class Index extends Component{
   
     }
     goback(){
-        console.log('11', this);
+        // console.log('11', this);
         this.props.history.goBack();
     }
     render(){

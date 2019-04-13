@@ -7,7 +7,8 @@ export default class index extends Component {
         return (
             <div>
                 <Model {...this.props}>
-                    <View   {...this.props} ></View>
+                    {prop=>  <View  {...prop} {...this.props} ></View>}
+                  
                 </Model>
                  
             </div>

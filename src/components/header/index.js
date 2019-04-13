@@ -21,43 +21,24 @@ class Index extends Component {
         });
 
     }
-    UNSAFE_componentWillReceiveProps(){
-        setTimeout(
-            ()=>{
 
-                let str = this.props.location.pathname;
-                if(str === '/login'){
-                    this.setState({
-                        boolen: false
-                    }, ()=>{
-                        console.log('boolen', this.state.boolen);
-                    });
-                }else{
-                    this.setState({
-                        boolen: true
-                    });
-                }
-            }, 100
-        );
-    
-    }
     changeLog(){
         cookie.remove('username');
     }
-    componentDidMount(){
-        let str = this.props.location.pathname;
-        if(str === '/login'){
-            this.setState({
+    static getDerivedStateFromProps(nextProps, preProps){
+        let str = nextProps.location.pathname;
+        console.log('str', str);
+        if(str === '/login' || str === '/user'){
+            return({
                 boolen: false
-            }, ()=>{
-                console.log('boolen', this.state.boolen);
             });
         }else{
-            this.setState({
+            return({
                 boolen: true
             });
         }
     }
+
     render() {
         const  {location} = this.props;
         const {boolen} = this.state;
