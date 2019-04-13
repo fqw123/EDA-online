@@ -1,0 +1,40 @@
+.titp{
+  height:44px;
+  border-bottom: 1px solid #ccc;
+  width:1000px;
+  margin: 20px auto;
+  vertical-align: bottom;
+  .txt{
+    display: inline-block;
+    margin-top: 10px;
+  }
+}
+.ubox{
+  width:1000px;
+  margin: 0 auto;
+  .imgBox{
+    width:120px;
+    height:120px;
+    background-color: antiquewhite;
+    float: left;
+  }
+  .user{
+    float: left;
+    height:60px;
+    width:600px;
+    font-size: 18px;
+    margin-left: 20px;
+
+  }
+  .pline{
+    
+    margin: 30px 0;
+    border-bottom: 1px solid  #ccc;
+    .tet{
+      float: left;
+    }
+    .num{
+      float: right;
+    }
+  }
+}
