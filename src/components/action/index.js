@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+
+import React from 'react';
 import View from './view';
 import Model from './model';
 
-export default class index extends Component {
-    render() {
-        return (
-            <Model  {...this.props}>
-                {prop => <View {...prop}/>}
-            </Model>
-        );
-    }
+export default function(props) {
+    return  (
+        <Model  {...props}>
+            {prop => <View {...prop}  {...props}  />}
+        </Model>
+    );
 }

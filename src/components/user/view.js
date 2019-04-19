@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import style from './style.module.scss';
-import {Icon, Table} from 'antd';
+import {Icon, Table, Pagination } from 'antd';
 import GoBack from '../../common/goBack/index';
 
 export default class view extends Component {
@@ -11,6 +11,20 @@ export default class view extends Component {
          key: '1',
          time: '2018-09-10'
        
+     }, {
+         key: '2',
+         time: '2018-09-11'
+     }, {
+         key: '1',
+         time: '2018-09-10'
+      
+     }, {
+         key: '2',
+         time: '2018-09-11'
+     }, {
+         key: '1',
+         time: '2018-09-10'
+      
      }, {
          key: '2',
          time: '2018-09-11'
@@ -35,7 +49,7 @@ export default class view extends Component {
          }
      }]
      render() {
-         const {data} = this.props;
+         const {data, currentPage, onChange} = this.props;
          return (
              <div className={style.ubox}  >
                  <div  className={style.titp}><span  className={style.txt}>个人中心</span>   <GoBack {...this.props}/>    </div>
@@ -47,7 +61,17 @@ export default class view extends Component {
                  <div>
                      <p className={style.pline + '  clearfix'}><span className={style.tet}>实验记录</span>   <span className={style.num}>共10条记录</span></p>
                  </div>
-                 <Table dataSource={this.dataSource} columns={this.columns} />
+                 <Table dataSource={this.dataSource}  pagination={false}  columns={this.columns} />
+                 <div className={style.page + ' fr '}  >
+                     {
+                         this.dataSource  instanceof Array && this.dataSource.length > 0 ?
+
+                             <Pagination showQuickJumper  current={currentPage} total={500} onChange={onChange} />
+                             :
+                             ''
+                     }
+                 </div>
+                
              </div>
          );
      }

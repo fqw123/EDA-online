@@ -5,7 +5,7 @@ export default class model extends Component {
     constructor(props){
         super(props);
         this.state = {
-
+            currentPage: Number()
         };
         bind(this);
     }
@@ -19,12 +19,19 @@ export default class model extends Component {
             };
         }
     }
+    onChange(v){
+        console.log('vvvvv', v);
+        this.setState({
+            currentPage: v
+        });
+    }
     render() {
-        {console.log('user-model', this);}
+      
         return(
             this.props.children({
                 ...this.state,
-                ...this.props
+                ...this.props,
+                onChange: this.onChange
 
             }) 
         );

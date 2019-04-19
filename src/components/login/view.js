@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Icon} from 'antd';
+import {Link, withRouter } from 'react-router-dom';
 import style from './style.module.scss';
 
 export default class view extends Component{
@@ -27,7 +28,8 @@ export default class view extends Component{
                             </p>
                            
                             <button onClick={clickJump} className={style.btnBox}>登录</button>
-                            <p  className={style.forget}><Icon type="question-circle"></Icon>忘记密码</p>
+                            <p  className={style.forget + '  fl  '}><Link  to={'/form?key=1'}><Icon type="form"></Icon>注册</Link></p>
+                            <p    className={style.forget + '  fr'}><Link  to={'/form?key=2'}><Icon type="question-circle"></Icon>忘记密码</Link></p>
                         </div>
                     </div>
                 </div>

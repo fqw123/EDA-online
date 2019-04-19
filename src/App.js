@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Router, Route, Switch, BrowserRouter } from 'react-router-dom';
+import {Router, Route, Switch, BrowserRouter, Redirect} from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import Header from './components/header';
 import Home from './components/home';
@@ -8,7 +8,7 @@ import Action from './components/action/index';
 import Study from './components/study';
 import Teach from './components/teach';
 import  Login from './components/login';
-import  LogOut from  './components/loginOut';
+import  FormUser from  './components/formUser';
 import Labor from './components/Laboratory';
 import User from './components/user';
 
@@ -28,7 +28,7 @@ class App extends Component {
                     <Route>
                         <Header className="App-header" {...this.props} >
                         </Header>
-                        <Route    component={Home}
+                        <Route    component={Login}
                             exact
                             path="/"
                         />
@@ -52,9 +52,9 @@ class App extends Component {
                             exact
                             path="/Login"
                         />
-                        <Route    component={LogOut}
+                        <Route    component={FormUser}
                             exact
-                            path="/LogOut"
+                            path="/form"
                         />
                         <Route    component={Active}
                             exact
@@ -68,6 +68,7 @@ class App extends Component {
                             exact
                             path="/user"
                         />
+                        
                     </Route>
                     
                 </Router>

@@ -25,3 +25,10 @@ a{
 .fr{
   float:right;
 }
+
+  .ant-pagination-item-active{
+    background-color: #1890ff!important;
+   }
+   .ant-pagination-item-active a {
+    color: #fff!important;
+   }

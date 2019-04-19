@@ -39,6 +39,7 @@ export default class model extends Component {
         });
        
     }
+    
     render() {
         console.log('this.props.children', this.props);
         return (
@@ -48,6 +49,7 @@ export default class model extends Component {
                 clickJump: this.clickJump,
                 userName: this.userName,
                 pWord: this.pWord
+                
             }) 
         );
     }
