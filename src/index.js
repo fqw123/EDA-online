@@ -15,6 +15,8 @@ ReactDOM.render(<LocaleProvider  local={zh_CN}><App /></LocaleProvider >, docume
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
+// "proxy": "http://192.168.43.179:80",
+
 // btn(){
 //   console.log('1111');
 //   fetch('https://api.github.com/users')

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import bind from 'react-autobind';
+import axios from 'axios';
 
 export default class model extends Component {
     constructor(props){
@@ -18,6 +19,7 @@ export default class model extends Component {
 
             };
         }
+
     }
     onChange(v){
         console.log('vvvvv', v);

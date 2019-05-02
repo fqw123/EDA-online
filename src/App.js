@@ -8,7 +8,7 @@ import Action from './components/action/index';
 import Study from './components/study';
 import Teach from './components/teach';
 import  Login from './components/login';
-import  FormUser from  './components/formUser';
+import  FormUser from  './components/formUser/index';
 import Labor from './components/Laboratory';
 import User from './components/user';
 

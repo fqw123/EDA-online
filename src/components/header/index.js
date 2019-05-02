@@ -27,9 +27,11 @@ class Index extends Component {
     }
     static getDerivedStateFromProps(nextProps, preProps){
         let str = nextProps.location.pathname;
-        console.log('str', str, str === '/login', str === '/user', str === '/');
+        // console.log('str', str, str === '/login', str === '/user', str === '/');
+        let arr = str.split('/');
+        console.log('返回', str.split('/'), arr.indexOf('Login'), arr.indexOf('user'), arr.indexOf('form') );
 
-        if(str === '/login' || str === '/user' || str === '/' || str === '/form'){
+        if(arr.indexOf('login') > 0 || arr.indexOf('user') > 0 || arr.indexOf('form') > 0 || str === '/'){
             return({
                 boolen: false
             });

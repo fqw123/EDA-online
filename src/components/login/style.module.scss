@@ -36,11 +36,16 @@
         input{
           background-color: transparent;
           border:none;
-          outline:medium;
-          width:150px;
+       
+          width:200px;
           height:25px;
           text-indent: 1.5rem;
           color:#fff;
+          outline: none;
+          &:focus{
+           
+            outline: none;
+          }
         }
         .pint{
           // color:#fff;

@@ -26,7 +26,7 @@ export default class view extends Component {
             <div className={style.active + '  clearfix'}>
                 <Tabs defaultActiveKey="1" onChange={this.callback}>
                     <TabPane tab="编辑" key="1"><Video  {...this.props}/></TabPane>
-                    <TabPane tab="操作" key="2"><Vision  {...this.props}  />   </TabPane>
+                    <TabPane tab="擝作" key="2"><Vision  {...this.props}  />   </TabPane>
                 </Tabs>
             </div>
         );

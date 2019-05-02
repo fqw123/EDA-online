@@ -56,7 +56,9 @@ export default class view extends Component {
                  <div  className="clearfix">
                      <div className={style.imgBox}><img/></div>
                      <div  className={style.user}><Icon type="user" />&emsp;用户名：user</div>
+                     <div  className={style.user}><Icon type="contacts" />&emsp;年级：2015级6班</div>
                      <div  className={style.user}><Icon type="mail" />&emsp;邮箱：1452342890@163.com</div>
+                     <div  className={style.user}><Icon type="edit" />&emsp;个人简介：红豆生南国，春来发几枝</div>
                  </div>
                  <div>
                      <p className={style.pline + '  clearfix'}><span className={style.tet}>实验记录</span>   <span className={style.num}>共10条记录</span></p>
