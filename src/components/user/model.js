@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import bind from 'react-autobind';
+
+import  {message} from 'antd';
 import axios from 'axios';
+
+axios.defaults.headers['Content-Type'] = 'application/json; charset=utf-8';
 
 export default class model extends Component {
     constructor(props){
         super(props);
         this.state = {
-            currentPage: Number()
+            currentPage: Number(),
+            userinfo: {}
         };
         bind(this);
     }
@@ -19,7 +24,25 @@ export default class model extends Component {
 
             };
         }
-
+        let email = localStorage.getItem('email');
+        console.log('email-localStorage', email);
+      
+        axios.post('http://localhost:80/user/info').then(
+            rem=>{
+                console.log('基本信息', rem);
+              
+                if(rem.status === 200){
+                    if(rem.data.userinfo){
+                        this.setState({
+                            userinfo: rem.data.userinfo
+                        });
+                    }else if(rem.data.code === 301){
+                        message.error('邮箱不存在');
+                    }
+                   
+                }
+            }
+        );
     }
     onChange(v){
         console.log('vvvvv', v);

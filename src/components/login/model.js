@@ -34,9 +34,8 @@ export default class model extends Component {
                     if(code === 200){
                         message.success('登录成功');
                         this.props.history.push('/home');
-                        cookie.save(
-                            'username', this.state.name
-                        );
+                       
+                        localStorage.setItem('email', this.state.name);
 
                     } else if(code === 300){
                         message.error('登录失败');

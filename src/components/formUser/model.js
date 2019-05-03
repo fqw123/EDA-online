@@ -4,8 +4,6 @@ import {message} from 'antd';
 import 'whatwg-fetch';
 import axios  from 'axios';
 
-import $ from 'jquery';
-
 axios.defaults.headers['Content-Type'] = 'application/json; charset=utf-8';
 
 export default class model extends Component {
