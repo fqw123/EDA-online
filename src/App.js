@@ -24,7 +24,6 @@ class App extends Component {
         return (
             <div className="App">
                 <Router  history={createHistory()}>
-                    {console.log('match', this)}
                     <Route>
                         <Header className="App-header" {...this.props} >
                         </Header>
@@ -67,10 +66,8 @@ class App extends Component {
                         <Route    component={User}
                             exact
                             path="/user"
-                        />
-                        
-                    </Route>
-                    
+                        />                       
+                    </Route>                 
                 </Router>
 
             </div>
